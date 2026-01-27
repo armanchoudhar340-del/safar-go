@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelGo | Your Journey Starts Here</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-paper-plane"></i> TravelGo
+            </div>
+            <ul class="nav-links">
+                <li><a href="#flights" class="active">Flights</a></li>
+                <li><a href="#trains">Trains</a></li>
+                <li><a href="#buses">Buses</a></li>
+                <li><a href="#hotels">Hotels</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="#login" class="btn-login">Log In</a>
+                <a href="#signup" class="btn-signup">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <h1>Your Journey Starts Here</h1>
+                <p>Book flights, trains, and buses at the best prices with one click.</p>
+
+                <div class="booking-widget">
+                    <!-- Tabs Control -->
+                    <input type="radio" name="booking-tab" id="tab-flights" checked>
+                    <input type="radio" name="booking-tab" id="tab-trains">
+                    <input type="radio" name="booking-tab" id="tab-buses">
+                    <input type="radio" name="booking-tab" id="tab-hotels">
+
+                    <div class="tab-header">
+                        <label for="tab-flights"><i class="fas fa-plane"></i> Flights</label>
+                        <label for="tab-trains"><i class="fas fa-train"></i> Trains</label>
+                        <label for="tab-buses"><i class="fas fa-bus"></i> Buses</label>
+                        <label for="tab-hotels"><i class="fas fa-bed"></i> Hotels</label>
+                    </div>
+
+                    <div class="tab-content">
+                        <!-- Flight Form -->
+                        <form action="listings.html" method="GET" class="booking-form flight-form">
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label>From</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <input type="text" name="from" placeholder="Origin City" required>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label>To</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-location-arrow"></i>
+                                        <input type="text" name="to" placeholder="Destination City" required>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label>Departure Date</label>
+                                    <div class="input-wrapper">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <input type="date" name="date" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn-search"><i class="fas fa-search"></i> Search
+                                    Flights</button>
+                            </div>
+                        </form>
+
+                        <!-- Train Form -->
+                        <form action="listings.html" method="GET" class="booking-form train-form">
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label>From</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <input type="text" name="from" placeholder="Origin Station" required>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label>To</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-location-arrow"></i>
+                                        <input type="text" name="to" placeholder="Destination Station" required>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label>Departure Date</label>
+                                    <div class="input-wrapper">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <input type="date" name="date" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn-search"><i class="fas fa-search"></i> Search
+                                    Trains</button>
+                            </div>
+                        </form>
+
+                        <!-- Bus Form -->
+                        <form action="listings.html" method="GET" class="booking-form bus-form">
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label>From</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <input type="text" name="from" placeholder="Origin City" required>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label>To</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-location-arrow"></i>
+                                        <input type="text" name="to" placeholder="Destination City" required>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label>Departure Date</label>
+                                    <div class="input-wrapper">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <input type="date" name="date" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn-search"><i class="fas fa-search"></i> Search
+                                    Buses</button>
+                            </div>
+                        </form>
+
+                        <!-- Hotel Form (Placeholder) -->
+                        <form action="listings.html" method="GET" class="booking-form hotel-form">
+                            <div class="form-row">
+                                <div class="input-group">
+                                    <label>City/Location</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <input type="text" name="location" placeholder="Enter City" required>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label>Check-in</label>
+                                    <div class="input-wrapper">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <input type="date" name="checkin" required>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label>Check-out</label>
+                                    <div class="input-wrapper">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <input type="date" name="checkout" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn-search"><i class="fas fa-search"></i> Search
+                                    Hotels</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-routes container">
+            <div class="section-header">
+                <h2>Popular Routes</h2>
+                <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="route-grid">
+                <!-- Card 1 -->
+                <article class="route-card">
+                    <div class="card-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1587474260584-13657452861d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                    </div>
+                    <div class="card-content">
+                        <span class="badge badge-flight">FLIGHTS</span>
+                        <h3>Delhi to Mumbai</h3>
+                        <div class="card-footer">
+                            <span class="label">Starting from</span>
+                            <span class="price">₹3,499</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="route-card">
+                    <div class="card-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1570168007204-dfb528c6958f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                    </div>
+                    <div class="card-content">
+                        <span class="badge badge-train">TRAINS</span>
+                        <h3>Mumbai to Pune</h3>
+                        <div class="card-footer">
+                            <span class="label">Starting from</span>
+                            <span class="price">₹450</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="route-card">
+                    <div class="card-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1582915293078-a36785370241?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                    </div>
+                    <div class="card-content">
+                        <span class="badge badge-bus">BUSES</span>
+                        <h3>Bangalore to Goa</h3>
+                        <div class="card-footer">
+                            <span class="label">Starting from</span>
+                            <span class="price">₹899</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="route-card">
+                    <div class="card-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1606214174585-fe31582dc6ee?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+                    </div>
+                    <div class="card-content">
+                        <span class="badge badge-flight">FLIGHTS</span>
+                        <h3>Chennai to Kochi</h3>
+                        <div class="card-footer">
+                            <span class="label">Starting from</span>
+                            <span class="price">₹2,800</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="why-choose-us container">
+            <div class="text-center">
+                <h2>Why Book with TravelGo?</h2>
+                <p>Join over 10 million travelers who trust us with their plans.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon icon-blue">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Best Price Guarantee</h3>
+                    <p>We find you the cheapest options across hundreds of operators instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-blue">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Customer Support</h3>
+                    <p>Our travel experts are always here to help you with your bookings and queries.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-blue">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Instant Booking</h3>
+                    <p>Get your tickets delivered to your email and WhatsApp within seconds.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>TravelGo</h3>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Corporate Travel</a></li>
+                    <li><a href="#">Partner Login</a></li>
+                    <li><a href="#">List your property</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 TravelGo. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

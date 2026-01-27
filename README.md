@@ -49,7 +49,5 @@ The website allows users to explore **Flights, Trains, Buses, and Hotels** booki
 - Mock booking result cards
 - Responsive layout
 
----
 
-## 🗂️ Project Structure
 

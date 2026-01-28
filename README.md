@@ -1,4 +1,4 @@
-# TravelGo - Travel Booking Website
+# safar go - Travel Booking Website
 
 A responsive travel booking website similar to MakeMyTrip, built with HTML5 and CSS3 only (no JavaScript).
 
